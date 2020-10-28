@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class bodymass here.
  * 
@@ -6,14 +5,15 @@
  * @version (a version number or a date)
  */
 import java.io.*;
-public class bmicalculator
+public class bmi
 {
-   String status=""; 
+  
+    public static void main(String[] args) throws IOException
+    {
+ String status=""; 
    double h;
     double w;
-    double bmi=0;
-    void input()throws IOException
-    {
+    double bm=0;
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter height in centimetres");
         h=Double.parseDouble(br.readLine());
@@ -23,22 +23,22 @@ public class bmicalculator
       
    
         h=h/100;
-        bmi=w/(h*h);
-        System.out.println("BMI="+bmi);
+        bm=w/(h*h);
+        System.out.println("BMI="+bm);
         {
-        if(bmi<=18.5)
+        if(bm<=18.5)
         {
             System.out.println("slim");
         }
-            if(bmi>18.5&&bmi<=24.5)
+            if(bm>18.5&&bm<=24.5)
             {
              System.out.println("fit");
         }
-        if(bmi>24.5&&bmi<=29.5)
+        if(bm>24.5&&bm<=29.5)
         {
          System.out.println("fat");
          }
-   if(bmi>29.5)
+   if(bm>29.5)
     {
     System.out.println("overweight");
     }
